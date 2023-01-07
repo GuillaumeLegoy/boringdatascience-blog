@@ -1,8 +1,8 @@
 {{ define "head" }}
-	{{ if .Site.Params.bgImg -}}
-	<style>.bg-img {background-image: url('{{.Site.Params.bgImg}}');}</style>
-	{{- else if .Site.Params.images -}}
-		{{- range first 1 .Site.Params.images -}}
+	{{ if .Params.featuredImg -}}
+	<style>.bg-img {background-image: url('{{.Params.featuredImg}}');}</style>
+	{{- else if .Params.images -}}
+		{{- range first 1 .Params.images -}}
 		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
 		{{- end -}}
 	{{- end -}}
@@ -26,6 +26,7 @@
 			<nav id="home-nav" class="site-nav">
 				{{ partialCached "menu.html" . }}
 			</nav>
+			
 		</div>
 		<div id="home-footer">
 			<p>
@@ -35,3 +36,4 @@
 		</div>
 	</div>
 {{ end }}
+

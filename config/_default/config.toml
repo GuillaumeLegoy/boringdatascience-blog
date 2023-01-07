@@ -7,9 +7,6 @@ theme = 'hermit'
 [author]
   name = "Guillaume Legoy"
 
-[blackfriday]
-  extensions = ["hardLineBreak"]
-
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"

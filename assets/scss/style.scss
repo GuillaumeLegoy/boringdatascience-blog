@@ -34,7 +34,7 @@ html {
     margin-top: 2em;
     margin-bottom: 2em;
     font-weight: 700;
-    font-size: 140%;
+    font-size: 130%;
   }
   
   h2 {
@@ -265,14 +265,15 @@ table {
 // Header & Footer
 //
 #site-header {
-  position: fixed;
+  position: relative;
   z-index: 1;
   bottom: 0;
+  right: 0;
   width: 100%;
   box-sizing: border-box;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
   background-color: $light-grey;
-  animation-duration: .3s;
+  animation-duration: .0s;
 }
 
 .hdr-wrapper {
@@ -284,7 +285,7 @@ table {
 
   .site-branding {
     display: inline-block;
-    margin-right: .8em;
+    margin-right: 14em;
     font-size: 1.2em;
   }
 
@@ -457,6 +458,7 @@ p.img-404 {
   font-size: 1.4em;
   text-align: center;
   opacity: .8;
+  
 
   a {
     margin: 0 .2em;
