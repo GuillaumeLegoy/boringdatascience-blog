@@ -1,28 +1,15 @@
 ---
-title: "Installing and Managing Python Using Pyenv."
+title: "Installing and Managing Python with Pyenv."
 author: "Guillaume Legoy"
 date: "2023-01-02"
-blackfriday:
-  - extensions: ["hardLineBreak"]
+
 ---
 
-The goal of this post is pretty trivial: act as a reference on how to install and manage Python versions on Mac/Linux. I recently got annoyed I had to Google it again across several websites to grab the necessary terminal commands, so here we are.
+
+The goal of this post is to act as a reference on how to install and manage Python versions on Mac/Linux. I recently got annoyed I had to Google it again across several websites to grab the necessary terminal commands, so here we are.
 
 
 ## Commands to Execute    
-
-  
-
-
-  
-
-
-
-
-</br>
-</br>
-</br>
-</br>
 
 
 First you'll need [homebrew](https://brew.sh/). Install it if not already done.
@@ -33,13 +20,13 @@ We will use [pyenv](https://github.com/pyenv/pyenv), which is (probably?) the be
 brew install pyenv
 ```
 
-Once done, modify `vim ~/.zprofile`by adding:
+Once done, modify `~/.zprofile`by adding:
 
 ```bash
 eval "$(pyenv init --path)"
 ```
 
-And then `vim ~/.zshrc` with:
+And then `~/.zshrc` with:
 
 ```bash
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -67,14 +54,16 @@ Tada! We're done. Relaunch your terminal or run `source ~/.zprofile` and Python 
 
 
 
-# Additional Useful Commands and Resources
+## Additional Useful Commands and Resources
+
+Below are additional useful commands in no particular order:
 
 ```bash
 pyenv versions # List installed Python versions
 pyenv install --list # List available Python versions
 ```
 
-To manage versions on your systems, read: https://realpython.com/intro-to-pyenv/#specifying-your-python-version.
+To manage versions on your systems, read [this realpython article](https://realpython.com/intro-to-pyenv/#specifying-your-python-version).
 
 
 Happy coding!

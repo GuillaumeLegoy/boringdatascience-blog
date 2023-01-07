@@ -22,7 +22,7 @@ theme = 'hermit'
   themeColor = "#494f5c"
 
 
-  homeSubtitle = "Because not everything can be AI."
+  homeSubtitle = "Because not everything has to be AI."
   # footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
@@ -45,6 +45,9 @@ theme = 'hermit'
     name = "twitter"
     url = "https://twitter.com/GLegoy"
 
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/guillaumelegoy/"
 
   [[params.social]]
     name = "github"
@@ -66,3 +69,5 @@ theme = 'hermit'
     name = "Newsletter"
     url = "/newsletter"
     weight = 20
+
+

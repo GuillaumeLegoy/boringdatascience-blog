@@ -1,7 +1,7 @@
 ---
 title: "How to Create a Blog Using Hugo"
 author: "Guillaume Legoy"
-date: "2023-01-03"
+date: "2023-01-07"
 ---
 
 {{< toc >}}
@@ -68,19 +68,27 @@ The above command will create a folder in the `themes` folder and then add the t
 hugo server
 ```
 
-and access your blog in a brower at http://localhost:1313/. Any change will automatically be picked up.
+and access your blog in a brower at `http://localhost:1313/`. Any change will automatically be picked up.
+
+
+## Deployment with Netlify
+
+Now that our blog is ready, it's time to make it available to everyone on the internet. To deploy our website we will use [Netlify](https://www.netlify.com/), a website deployment solution. Netlify makes this step extremely simple, and Hugo provides with a [great step by step tutorial](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/) on how to do it. Be aware you will be charged around 15$ a year for this service. If you want something free, [Github Pages](https://pages.github.com/) are a great alternative.
+
+Note that at this point your site will be accessible through the `your-site-name.netlify.app` domain. If you wish to own your own domain (like `boringdatascience.com`), you will need to purchase a domain name. I use [Namecheap](https://www.namecheap.com/) but any solution out there will do. 
+
 
 ## Customization
 
 Now comes the fun part. Each theme as far as I know behaves differently with Hugo. Which is why you will find many support post on Hugo forum asking why X or Y theme isn't working and Hugo maintainers unable or unwilling to answer as it's not part of Hugo core. What follows is proper to the Hermit theme, so if you aren't using it you can probably stop reading and refer to your own theme documentation, if it exists (fun!). Nevertheless some insights might still apply to your theme, so if you are stuck, check what's following.
 
-### Manage your Blog Style
+### Styling
 
 To change the look and feel of your blog, you'll need to edit css files. To do so you first need to copy the content of `themes/hermit/assets/scss` into `assets/scss` (always starting from the root of your site folder). The reason is we don't want to directly change the theme css files, but instead change their copies. These copies we just created will override the original. It's also easy to revert any unwanted change if needed that way.
 
 Once that is done, we can edit our blog style. Keep in mind I'm not good at css so I mainly hack my way through trial and error. Feel free to comment and tell me what I'm doing is awful and I should be banned from approaching a website ever again. With that being said, I'll now list a non-exhaustive list of what can be changed, always starting with the path of the file to look at:
 
-**1. Text padding, spacing, site background, and colors**
+#### Text and colors
 
 In `themes/hermit/assets/scss/style.scss`, search for the `html` tag and modify as desired, such as:
 
@@ -123,9 +131,8 @@ html {
 
 This controls a lot of things, especially space between paragraphs and under titles, which help your text breathe and don't look too cramped.
 
-**2. Text fonts and colors**
 
-You may have noticed in the above snippet that we have a `$light-grey` parameter. In `themes/hermit/assets/scss/_predefined.scss`, you can find and change colors. Mine look like this (yes I know colors don't match their name but I'm lazy):
+You may also have noticed in the above snippet that we have a `$light-grey` parameter. In `themes/hermit/assets/scss/_predefined.scss`, you can find and change colors. Mine look like this (yes I know colors don't match their name but I'm lazy):
 
 ```scss
 // Colors
@@ -138,9 +145,8 @@ $highlight-grey: #7d828a;
 $midnightblue: #433e56;
 ```
 
-**3. Hyperlinks regular and highlight colors**
 
-Still `themes/hermit/assets/scss/_predefined.scss` you can change links color as well links highlight colors when hovering over them (e.g. [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) in orange and green):
+Finally, still in `themes/hermit/assets/scss/_predefined.scss` you can change links color as well as links highlight colors when hovering over them (e.g. [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) in orange and green):
 
 ```scss
 @mixin aTag {
@@ -154,7 +160,7 @@ Still `themes/hermit/assets/scss/_predefined.scss` you can change links color as
 }
 ```
 
-**4. Block Codes**
+#### Code blocks
 
 This one gave me a massive headache. If you want to change the background color of code blocks such as the one below, first open `themes/hermit/assets/scss/style.scss` and find the `pre` class under `code`, then you need to add the `!important` tag to override Hugo's default. I still haven't found out how to change code comments, so drop me a line if you figure it out.
 
@@ -185,7 +191,7 @@ pre {
 }
 ```
 
-**5. Increase the default witdh of your text**
+#### Page width
 
 By default I find Hugo's text column width to be too narrow, which doesn't provide a nice reading experience. To change this default, find the `.thin` class in `themes/hermit/assets/scss/style.scss` and modify the `max-width` parameter:
 
@@ -196,7 +202,7 @@ By default I find Hugo's text column width to be too narrow, which doesn't provi
 }
 ```
 
-### Open Hyperlinks in a New Window
+### Hyperlinks
 
 If you want links such as [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) to open in a new window, do the following:
 
@@ -207,7 +213,7 @@ If you want links such as [Hugo Quick Start](https://gohugo.io/getting-started/q
 <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
 ```
 
-### Add a Table of Content
+### Table of Content
 
 Tables of contents are imo very nice to have as they provide more clarity to blog posts and allow for easy navigation on subsequent visits (because I know you keep re-reading my posts, right?....right?). To add one, follow these steps:
 
@@ -251,3 +257,23 @@ Tables of contents are imo very nice to have as they provide more clarity to blo
   }
 }
 ```
+
+### Social Icons
+
+To add social icons to the main welcome page of your blog, simply add the following in you `config.toml` file found in your website root or in `config/_default`:
+
+```markdown
+ [[params.social]]
+    name = "twitter"
+    url = "your-twitter-profile-url"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "your-linkedin-profile-url"
+
+  [[params.social]]
+    name = "github"
+    url = "your-github-profile-url"
+```
+
+Happy coding!

@@ -41,16 +41,24 @@ html {
     color: #265483;
     margin-top: 2.5em;
     margin-bottom: -0.5em;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 120%;
   }
 
-  h3, h4, h5, h6 {
-    color:  #333;
+  h3 {
+    color:  #3069a4;
     margin-top: 2.5em;
     margin-bottom: -0.5em;
-    font-weight: 600;
-    font-size: 110%;
+    font-weight: 500;
+    font-size: 105%;
+  }
+
+  h4, h5, h6 {
+    color:  #262b2f;
+    margin-top: 2.5em;
+    margin-bottom: -0.5em;
+    font-weight: 500;
+    font-size: 100%;
   }
 }
 
@@ -732,12 +740,14 @@ a.footnote-ref {
   //@include dimmed;
 
   ul {
-    padding-left: 0em;
     margin: 0;
   }
 
   &>ul {
     list-style-type: none;
+    li {
+      padding-left: 0;
+    }
 
     ul ul {
       font-size: 1em;
