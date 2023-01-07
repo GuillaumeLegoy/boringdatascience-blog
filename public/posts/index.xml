@@ -1,0 +1,87 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Boring Data Science</title>
+		<link>https://boringdatascience.com/posts/</link>
+		<description>Recent content in Posts on Boring Data Science</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate>
+		<atom:link href="https://boringdatascience.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>How to Create your Blog using the Hugo Template.</title>
+			<link>https://boringdatascience.com/posts/how-to-create-your-blog-using-hugo/</link>
+			<pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+			
+			<guid>https://boringdatascience.com/posts/how-to-create-your-blog-using-hugo/</guid>
+			<description>Prerequisites Before we start, make sure the following tools are installed on your machine:
+install Hugo install Git Generating our Blog Skeleton Using the command line, we will now create our website hugo skeleton. To do so execute the following commands:
+cd ~/Documents # Pick the location (here ~/Document) you want your blog folder to be located in. hugo new site my-cool-blog # Pick the name of your folder here (my-cool-blog for this tutorial).</description>
+			<content type="html"><![CDATA[<h1 id="prerequisites">Prerequisites</h1>
+<p>Before we start, make sure the following tools are installed on your machine:</p>
+<ul>
+<li><a href="https://gohugo.io/installation/">install Hugo</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a></li>
+</ul>
+<h1 id="generating-our-blog-skeleton">Generating our Blog Skeleton</h1>
+<p>Using the command line, we will now create our website hugo skeleton. To do so execute the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/Documents <span style="color:#75715e"># Pick the location (here ~/Document) you want your blog folder to be located in.</span>
+</span></span><span style="display:flex;"><span>hugo new site my-cool-blog <span style="color:#75715e"># Pick the name of your folder here (my-cool-blog for this tutorial).</span>
+</span></span><span style="display:flex;"><span>cd my-cool-blog
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>At this point it&rsquo;s time to add the theme folder. A theme is how your blog will look and feel. There are hundreds of them, such as <a href="https://academic-demo.netlify.app/">Academic</a>, <a href="https://github.com/adityatelange/hugo-PaperMod">Papermode</a>, and many others. The theme I use for this blog is <a href="https://github.com/Track3/hermit">Hermit</a>. Choose a theme based on your requirements. For my blog I needed:</p>
+<ul>
+<li>a minimalistic theme</li>
+<li>a simple way to display blog posts</li>
+</ul>
+<p>&hellip;therefore it doesn&rsquo;t matter to me if the theme offers few customization options or hasn&rsquo;t been updated in a while. On the other hands if you require many options such as SEO, photo display, or other advanced capabilities, pick a theme accordingly.</p>
+<p>To add a theme (for this example I&rsquo;ll use Hermit), run the follwing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/Track3/hermit.git themes/hermit
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;hermit&#39;&#34;</span> &gt;&gt; config.toml
+</span></span></code></pre></div><p>The above command will create a folder in the <code>themes</code> folder and then add the theme to the <code>config.toml</code> file to tell Hugo we want the Hermit theme to be used. Your blog is now ready to be built locally, run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>and access your blog in a brower at http://localhost:1313/. Any change will automatically be picked up.</p>
+<h1 id="customize-your-blog">Customize your Blog</h1>
+<p>Now comes the fun part. Each theme as far as I know behaves differently with Hugo. Which is why you will find many support post on Hugo forum asking why X or Y theme isn&rsquo;t working and Hugo maintainers unable or unwilling to answer as it&rsquo;s not part of Hugo core. What follows is proper to the Hermit theme, so if you aren&rsquo;t using it you can probably stop reading and refer to your own theme documentation, if it exists (fun!). Nevertheless some insights might still apply to your theme, so if you are stuck, check what&rsquo;s following.</p>
+<h2 id="changing-colors-and-fonts">Changing Colors and Fonts</h2>
+]]></content>
+		</item>
+		
+		<item>
+			<title>Installing and Managing Python Using Pyenv.</title>
+			<link>https://boringdatascience.com/posts/installing-and-managing-python-using-pyenv/</link>
+			<pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+			
+			<guid>https://boringdatascience.com/posts/installing-and-managing-python-using-pyenv/</guid>
+			<description>The goal of this post is pretty trivial: act as a reference on how to install and manage Python versions on Mac/Linux. I recently got annoyed I had to Google it again across several websites to grab the necessary terminal commands, so here we are.
+Commands to Execute First you&amp;rsquo;ll need homebrew. Install it if not already done.
+We will use pyenv, which is (probably?) the best way to manage Python on your system in 2023.</description>
+			<content type="html"><![CDATA[<p>The goal of this post is pretty trivial: act as a reference on how to install and manage Python versions on Mac/Linux. I recently got annoyed I had to Google it again across several websites to grab the necessary terminal commands, so here we are.</p>
+<h2 id="commands-to-execute">Commands to Execute</h2>
+<!-- raw HTML omitted -->
+<p>First you&rsquo;ll need <a href="https://brew.sh/">homebrew</a>. Install it if not already done.</p>
+<p>We will use <a href="https://github.com/pyenv/pyenv">pyenv</a>, which is (probably?) the best way to manage Python on your system in 2023. Let&rsquo;s get started by opening your terminal and enter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install pyenv
+</span></span></code></pre></div><p>Once done, modify <code>vim ~/.zprofile</code>by adding:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv init --path<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>And then <code>vim ~/.zshrc</code> with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv init -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span></code></pre></div><p>Then install Python and set it globally by running (latest at time of writing this is 3.11.1, modify accordingly by checking the available list at <code>pyenv install -l</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pyenv install 3.11.1 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pyenv global 3.11.1
+</span></span></code></pre></div><p>Finally add the following to <code>~/.zprofile</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pyenv init --path<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Tada! We&rsquo;re done. Relaunch your terminal or run <code>source ~/.zprofile</code> and Python will now be installed and ready to go.</p>
+<h1 id="additional-useful-commands-and-resources">Additional Useful Commands and Resources</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pyenv versions <span style="color:#75715e"># List installed Python versions</span>
+</span></span><span style="display:flex;"><span>pyenv install --list <span style="color:#75715e"># List available Python versions</span>
+</span></span></code></pre></div><p>To manage versions on your systems, read: <a href="https://realpython.com/intro-to-pyenv/#specifying-your-python-version">https://realpython.com/intro-to-pyenv/#specifying-your-python-version</a>.</p>
+<p>Happy coding!</p>
+]]></content>
+		</item>
+		
+	</channel>
+</rss>

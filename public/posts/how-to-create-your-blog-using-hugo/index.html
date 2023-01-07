@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="How to Create your Blog using the Hugo Template.">
+<meta itemprop="description" content="Prerequisites Before we start, make sure the following tools are installed on your machine:
+install Hugo install Git Generating our Blog Skeleton Using the command line, we will now create our website hugo skeleton. To do so execute the following commands:
+cd ~/Documents # Pick the location (here ~/Document) you want your blog folder to be located in. hugo new site my-cool-blog # Pick the name of your folder here (my-cool-blog for this tutorial)."><meta itemprop="datePublished" content="2023-01-03T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-01-03T00:00:00+00:00" />
+<meta itemprop="wordCount" content="371">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="How to Create your Blog using the Hugo Template." />
+<meta property="og:description" content="Prerequisites Before we start, make sure the following tools are installed on your machine:
+install Hugo install Git Generating our Blog Skeleton Using the command line, we will now create our website hugo skeleton. To do so execute the following commands:
+cd ~/Documents # Pick the location (here ~/Document) you want your blog folder to be located in. hugo new site my-cool-blog # Pick the name of your folder here (my-cool-blog for this tutorial)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://boringdatascience.com/posts/how-to-create-your-blog-using-hugo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Create your Blog using the Hugo Template."/>
+<meta name="twitter:description" content="Prerequisites Before we start, make sure the following tools are installed on your machine:
+install Hugo install Git Generating our Blog Skeleton Using the command line, we will now create our website hugo skeleton. To do so execute the following commands:
+cd ~/Documents # Pick the location (here ~/Document) you want your blog folder to be located in. hugo new site my-cool-blog # Pick the name of your folder here (my-cool-blog for this tutorial)."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>How to Create your Blog using the Hugo Template.</title>
+	<link rel="stylesheet" href="https://boringdatascience.com/css/style.min.598f001b1a58bbe1623363e62724e1328dfef1d035fcd40bd7ce7bb1abce6459.css" integrity="sha256-WY8AGxpYu+FiM2PmJyThMo3+8dA1/NQL1857savOZFk=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://boringdatascience.com/">Boring Data Science</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://boringdatascience.com/posts/">Posts</a>
+				<a href="https://boringdatascience.com/about-hugo/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/GLegoy" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://github.com/GuillaumeLegoy" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://boringdatascience.com/posts/">Posts</a></li>
+			<li><a href="https://boringdatascience.com/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jan 3, 2023</span></div>
+				<h1>How to Create your Blog using the Hugo Template.</h1>
+			</header>
+			<div class="content">
+				<h1 id="prerequisites">Prerequisites<a href="#prerequisites" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<p>Before we start, make sure the following tools are installed on your machine:</p>
+<ul>
+<li><a href="https://gohugo.io/installation/">install Hugo</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a></li>
+</ul>
+<h1 id="generating-our-blog-skeleton">Generating our Blog Skeleton<a href="#generating-our-blog-skeleton" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<p>Using the command line, we will now create our website hugo skeleton. To do so execute the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/Documents <span style="color:#75715e"># Pick the location (here ~/Document) you want your blog folder to be located in.</span>
+</span></span><span style="display:flex;"><span>hugo new site my-cool-blog <span style="color:#75715e"># Pick the name of your folder here (my-cool-blog for this tutorial).</span>
+</span></span><span style="display:flex;"><span>cd my-cool-blog
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><p>At this point it&rsquo;s time to add the theme folder. A theme is how your blog will look and feel. There are hundreds of them, such as <a href="https://academic-demo.netlify.app/">Academic</a>, <a href="https://github.com/adityatelange/hugo-PaperMod">Papermode</a>, and many others. The theme I use for this blog is <a href="https://github.com/Track3/hermit">Hermit</a>. Choose a theme based on your requirements. For my blog I needed:</p>
+<ul>
+<li>a minimalistic theme</li>
+<li>a simple way to display blog posts</li>
+</ul>
+<p>&hellip;therefore it doesn&rsquo;t matter to me if the theme offers few customization options or hasn&rsquo;t been updated in a while. On the other hands if you require many options such as SEO, photo display, or other advanced capabilities, pick a theme accordingly.</p>
+<p>To add a theme (for this example I&rsquo;ll use Hermit), run the follwing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/Track3/hermit.git themes/hermit
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;hermit&#39;&#34;</span> &gt;&gt; config.toml
+</span></span></code></pre></div><p>The above command will create a folder in the <code>themes</code> folder and then add the theme to the <code>config.toml</code> file to tell Hugo we want the Hermit theme to be used. Your blog is now ready to be built locally, run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>and access your blog in a brower at http://localhost:1313/. Any change will automatically be picked up.</p>
+<h1 id="customize-your-blog">Customize your Blog<a href="#customize-your-blog" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<p>Now comes the fun part. Each theme as far as I know behaves differently with Hugo. Which is why you will find many support post on Hugo forum asking why X or Y theme isn&rsquo;t working and Hugo maintainers unable or unwilling to answer as it&rsquo;s not part of Hugo core. What follows is proper to the Hermit theme, so if you aren&rsquo;t using it you can probably stop reading and refer to your own theme documentation, if it exists (fun!). Nevertheless some insights might still apply to your theme, so if you are stuck, check what&rsquo;s following.</p>
+<h2 id="changing-colors-and-fonts">Changing Colors and Fonts<a href="#changing-colors-and-fonts" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>Guillaume Legoy</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>371 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2023-01-03 01:00 &#43;0100</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="https://boringdatascience.com/posts/installing-and-managing-python-using-pyenv/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Installing and Managing Python Using Pyenv.</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2023 <a href="https://boringdatascience.com/">Guillaume Legoy</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://boringdatascience.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://boringdatascience.com/js/bundle.min.580988ed2982bcbb74a1773c7abea97b43e4c43b9324e10cda0813ec6ec4bb67.js" integrity="sha256-WAmI7SmCvLt0oXc8er6pe0PkxDuTJOEM2ggT7G7Eu2c=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boring Data Science</title>
+    <link>https://boringdatascience.com/</link>
+    <description>Recent content on Boring Data Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://boringdatascience.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Create your Blog using the Hugo Template.</title>
+      <link>https://boringdatascience.com/posts/how-to-create-your-blog-using-hugo/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://boringdatascience.com/posts/how-to-create-your-blog-using-hugo/</guid>
+      <description>Prerequisites Before we start, make sure the following tools are installed on your machine:
+install Hugo install Git Generating our Blog Skeleton Using the command line, we will now create our website hugo skeleton. To do so execute the following commands:
+cd ~/Documents # Pick the location (here ~/Document) you want your blog folder to be located in. hugo new site my-cool-blog # Pick the name of your folder here (my-cool-blog for this tutorial).</description>
+    </item>
+    
+    <item>
+      <title>Installing and Managing Python Using Pyenv.</title>
+      <link>https://boringdatascience.com/posts/installing-and-managing-python-using-pyenv/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://boringdatascience.com/posts/installing-and-managing-python-using-pyenv/</guid>
+      <description>The goal of this post is pretty trivial: act as a reference on how to install and manage Python versions on Mac/Linux. I recently got annoyed I had to Google it again across several websites to grab the necessary terminal commands, so here we are.
+Commands to Execute First you&amp;rsquo;ll need homebrew. Install it if not already done.
+We will use pyenv, which is (probably?) the best way to manage Python on your system in 2023.</description>
+    </item>
+    
+  </channel>
+</rss>
