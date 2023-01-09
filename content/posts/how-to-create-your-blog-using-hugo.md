@@ -2,6 +2,7 @@
 title: "How to Create a Blog Using Hugo"
 author: "Guillaume Legoy"
 date: "2023-01-07"
+socialshare: true
 ---
 
 {{< toc >}}

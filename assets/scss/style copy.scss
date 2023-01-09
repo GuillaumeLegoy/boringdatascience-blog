@@ -362,12 +362,6 @@ table {
   }
 }
 
-html, body {
-  margin: 0;
-  height: 100%;
-  min-height: 100%;
-}
-
 #site-footer {
   text-align: center;
   font-size: .9em;
@@ -384,11 +378,10 @@ html, body {
 #spotlight {
   display: flex;
   flex: 4 0 auto;
-  height:auto;
+
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-  height: 100%;
 
  
 
@@ -444,23 +437,34 @@ p.img-404 {
     }
   }
 }
+@media(min-width: 600px) {
 #home-center {
-  display: flex;
-  flex-wrap: wrap;
-  max-width : 1290px;
-  margin-top: 10%;
-  
-  
+  display: grid;
+  gap: 3rem;
+  grid-auto-flow: column;
+  margin-top: 8em;
+  width: 100%;
+  max-width: 1290px;
+  flex: 1 0 auto;
 
 }
-
+}
 
 .home-profile {
-  display: wrap;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  margin-bottom: auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
   word-spacing: -1px;
-  text-align: justify;
-  width: 75%;
-  margin-left: 10px;
+  
+  
 }
 
 
@@ -470,25 +474,16 @@ p.img-404 {
 }
 
 .home-subtitle {
+  margin-top: 1em;
   margin-bottom: 2em;
   line-height: normal;
   opacity: .9;
   text-align: justify;
-  hyphens: auto;
   color: #333;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 400;
-  font-size: 70%;
+  font-size: 80%;
   letter-spacing: -.01em;
-  width: 71%;
-  margin-left: 30px;
-  margin-top: 3%;
-  
-}
-
-#profilecolumn  {
-  align-items: center;
-  display: flex;
   
 }
 
@@ -517,13 +512,10 @@ p.img-404 {
   text-align: center;
   font-size: .6em;
   @include dimmed;
+  max-width: 1290px;
   font-size: 0.8rem;
-  position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   
+  display: contents;
+  grid-area: home-footer;
 
 
   p {
@@ -532,11 +524,16 @@ p.img-404 {
   }
 }
 
-
+.profilecolumn {
+  display: flex
+  
+}
 
 
 .profile {
   text-align: center;
+  padding: 30px 10px;
+  margin-left: 2000px;
 }
 
 .avatar-circle {
@@ -1133,7 +1130,7 @@ ul.share-icons li > * .label {
 
 
 /* CSS */
-#button-1 {
+.button-1 {
   background-color: #265483;
   border-radius: 8px;
   border-style: none;
@@ -1160,36 +1157,5 @@ ul.share-icons li > * .label {
 
 .button-1:hover,
 .button-1:focus {
-  background-color: #20c997;
-}
-
-#button-2 {
-  background-color: #265483;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $fonts;
-  height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin-left: 20px;
-}
-
-.button-2:hover,
-.button-2:focus {
   background-color: #20c997;
 }

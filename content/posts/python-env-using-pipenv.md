@@ -6,10 +6,7 @@ date: "2020-02-08"
 **Warning**: this post is obsolete, refer to [this article for an up to date tutorial](http://localhost:64520/posts/switching-to-poetry-python-dependencies/).
 
 
-
 {{< toc >}}
-
-
 
 
 ## The Pitfalls of Python Environments and Dependencies.

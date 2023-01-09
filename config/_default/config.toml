@@ -7,6 +7,7 @@ theme = 'hermit'
 [author]
   name = "Guillaume Legoy"
 
+
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
@@ -21,7 +22,7 @@ theme = 'hermit'
   # favicon = "static/favicon.ico" # Path to favicon file
 
 
-  homeSubtitle = "Because not everything has to be AI."
+  homeSubtitle = "Welcome to Boring Data Science. I'm Guillaume, a data <insert flavor of the day> with over 10 years of experience working in gaming and for startups. I specialize in developing analytics infrastructures and data products. In this blog I explore various topic around what I learn. AWS, Python, analytics engineering, or the modern data stacks are the main topics you can expect. Enjoy you stay!"
   # footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
@@ -38,6 +39,10 @@ theme = 'hermit'
   # Add custom css
   # customCSS = ["css/foo.css", "css/bar.css"]
 
+
+  [[params.socialshare]]
+    twitter = true
+
   # Social Icons
   # Check https://github.com/Track3/hermit#social-icons for more info.
   [[params.social]]
@@ -52,6 +57,7 @@ theme = 'hermit'
     name = "github"
     url = "https://github.com/GuillaumeLegoy"
 
+
 [menu]
 
   [[menu.main]]
@@ -60,13 +66,6 @@ theme = 'hermit'
     weight = 10
 
   [[menu.main]]
-    name = "About"
-    url = "about-hugo/"
-    weight = 30
-
-  [[menu.main]]
     name = "Newsletter"
     url = "/newsletter"
     weight = 20
-
-
