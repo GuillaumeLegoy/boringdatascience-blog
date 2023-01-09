@@ -22,7 +22,7 @@ theme = 'hermit'
   # favicon = "static/favicon.ico" # Path to favicon file
 
 
-  homeSubtitle = "Welcome to Boring Data Science. I'm Guillaume, a data <insert flavor of the day> with over 10 years of experience working in gaming and for startups. I specialize in developing analytics infrastructures and data products. In this blog I explore various topic around what I learn. AWS, Python, analytics engineering, or the modern data stacks are the main topics you can expect. Enjoy you stay!"
+  homeSubtitle = "Welcome to Boring Data Science. I'm Guillaume, a data engineer with over 10 years of experience working in gaming and for startups. I specialize in developing analytics infrastructures and data products. In this blog I explore various topic around what I learn. AWS, Python, analytics engineering, or the modern data stacks are the main topics you can expect. Enjoy you stay!"
   # footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
